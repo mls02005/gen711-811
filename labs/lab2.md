@@ -55,6 +55,30 @@ You should see an indication that it downloaded to your home directory
 
 Note: Text files saved with the '.md' after it will be interpreted at 'markdown' format. We will get into this soon. 
 
+
+### Use SSH keys on RON so that you dont need passwords to push your lab notebook
+1. Generate an SSH key pair (if you don't have one) in your host's terminal using the command:
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+2. Add your public key to your GitHub account:
+- Copy the content of your public key file using ```cat ~/.ssh/id_ed25519.pub```
+- This should print the key to the terminal screen
+- Go to your GitHub account's Settings > SSH and GPG keys.
+- Click New SSH key, give it a title, paste the copied public key, and click Add SSH key.
+
+3. Change your repository's remote URL:
+- In your repository's directory, check the current remote URL with ```git remote -v```
+- If it's an HTTPS URL (e.g., https://github.com), change it to the SSH format with
+```
+git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+```
+Note: replace 'USERNAME' with your github username, and 'REPOSITORY' with the name of the repository you made for your lab notebook above
+
+4. Test the connection at RON with: ```ssh -T git@github.com```
+You should see a message confirming a successful connection. Now, subsequent push and pull operations from within VS Code will use SSH authentication without prompting for credentials. 
+
+5. Do the same for your 'gen711-811' repository.
+
 ### Updating your copy of 'gen711-811' each week.
 ### If you forked gen711-811, this is probably the easiest method
 To get new course files added to your repository later, you will need to add the original repository (the one you forked) as a 'remote' [see here for help](https://stackoverflow.com/questions/3903817/pull-new-updates-from-original-github-repository-into-forked-github-repository),[and here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)  
