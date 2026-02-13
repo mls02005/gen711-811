@@ -1,4 +1,4 @@
-Lab 3 (2/6/26)
+## Lab 3 (2/6/26)
 pwd = print working directory, shows where you are. 
 ls = list directory
 cd ../ = back up one directory
@@ -31,3 +31,10 @@ ls /bin = can search within the bin folder w/o being actually in that folder.
 wc = word count
 wc -l = count the number of lines
 ls /bin/ | grep '^c' | wc -l = find and count files that start with c
+
+
+##Lab 4 
+cd = goes to home directory
+*test question: list 4 ways to change directories
+
+ls ../../ = list the files in 2 directories back

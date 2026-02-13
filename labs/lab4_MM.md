@@ -15,7 +15,7 @@ exercises: 15
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I view and search file contents?
+- How can I view and search file contents? 
 - How can I create, copy and delete files and directories?
 - How can I control who has permission to modify a file?
 - How can I repeat recently used commands?
@@ -64,8 +64,9 @@ what will `ls ../backup` display?
 First navigate to the shell_data directory. There is a hidden directory within this directory. Explore the options for ls to find out how to see hidden directories. List the contents of the directory and identify the name of the text file in that directory.
 
 Hint: hidden files and folders in Unix start with ., for example .my_hidden_directory
+ls .*
 
-What is the hidden file name in the hidden directory?
+What is the hidden file name in the hidden directory? youfoundit.txt
 
 ### EXERCISE 5: HISTORY
 Find the line number in your history for the command that listed all the .sh files in /usr/bin. Rerun that command.
